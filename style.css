@@ -309,8 +309,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
     align-items: center;
 }
 
@@ -322,7 +322,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-video-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 9 / 13;
     background: transparent;
     overflow: visible;
 }
@@ -469,7 +469,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .bubble {
     position: absolute;
-    bottom: 35%;
+    top: 15%;
     width: 6px;
     height: 6px;
     background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2));
@@ -523,7 +523,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes bubbleRise {
     0% {
-        bottom: 30%;
+        top: 15%;
         opacity: 0;
         transform: translateX(0) translateY(0) scale(0.3);
     }
@@ -531,12 +531,12 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 0.8;
     }
     50% {
-        transform: translateX(3px) translateY(-100px) scale(1);
+        transform: translateX(3px) translateY(-80px) scale(1);
     }
     100% {
-        bottom: 70%;
+        top: -10%;
         opacity: 0;
-        transform: translateX(-5px) translateY(-200px) scale(0.5);
+        transform: translateX(-5px) translateY(-160px) scale(0.5);
     }
 }
 
@@ -1422,8 +1422,8 @@ section {
     }
 
     .hero-video-container {
-        aspect-ratio: 9 / 16;
-        max-height: 70vh;
+        aspect-ratio: 9 / 13;
+        max-height: 60vh;
     }
 
     .video-overlay-text {
