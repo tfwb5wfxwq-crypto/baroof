@@ -52,58 +52,66 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg">
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="hero-cocktail.mp4" type="video/mp4">
-            </video>
-            <div class="hero-overlay"></div>
-        </div>
-
-        <!-- Animated bubbles (on glass) -->
-        <div class="bubbles-container">
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-        </div>
-
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                        <path d="M8 7c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm0 1c-1.11 0-2 .89-2 2v3h4v-3c0-1.11-.89-2-2-2zm4 2c0-.74-.2-1.43-.54-2.03C12.39 7.37 13 6.45 13 5.5c0-1.38-1.12-2.5-2.5-2.5S8 4.12 8 5.5c0 .95.61 1.87 1.54 2.47-.34.6-.54 1.29-.54 2.03v3h3v-3z"/>
-                    </svg>
-                    On ramène le bar chez vous
+            <div class="hero-grid">
+                <!-- Left: Text Content -->
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 7c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm0 1c-1.11 0-2 .89-2 2v3h4v-3c0-1.11-.89-2-2-2zm4 2c0-.74-.2-1.43-.54-2.03C12.39 7.37 13 6.45 13 5.5c0-1.38-1.12-2.5-2.5-2.5S8 4.12 8 5.5c0 .95.61 1.87 1.54 2.47-.34.6-.54 1.29-.54 2.03v3h3v-3z"/>
+                        </svg>
+                        On ramène le bar chez vous
+                    </div>
+
+                    <h1 class="hero-title">
+                        Un bar, des gens,<br>
+                        <span class="underline-highlight">un moment</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Le bar, c'est là où les gens se retrouvent. Où les conversations démarrent. Où les équipes se soudent. Où les souvenirs se créent.<br><br>
+                        On apporte cette magie là où vous êtes : bureau, mariage, anniversaire, jardin.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary btn-lg">Parlons de votre événement</a>
+                        <a href="#comment-ca-marche" class="btn btn-secondary btn-lg">Comment ça marche</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Moments partagés</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Référeraient appel à nous</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Avec ou sans alcool</div>
+                        </div>
+                    </div>
                 </div>
 
-                <h1 class="hero-title">
-                    Un bar, des gens,<br>
-                    <span class="underline-highlight">un moment</span>
-                </h1>
+                <!-- Right: Video with overlay text -->
+                <div class="hero-video-container">
+                    <video autoplay muted loop playsinline class="hero-video">
+                        <source src="hero-cocktail.mp4" type="video/mp4">
+                    </video>
 
-                <p class="hero-description">
-                    Le bar, c'est là où les gens se retrouvent. Où les conversations démarrent. Où les équipes se soudent. Où les souvenirs se créent.<br><br>
-                    On apporte cette magie là où vous êtes : bureau, mariage, anniversaire, jardin.
-                </p>
-
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary btn-lg">Parlons de votre événement</a>
-                    <a href="#comment-ca-marche" class="btn btn-secondary btn-lg">Comment ça marche</a>
-                </div>
-
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Moments partagés</div>
+                    <!-- Bubbles on glass -->
+                    <div class="bubbles-container">
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
                     </div>
-                    <div class="stat">
-                        <div class="stat-number">98%</div>
-                        <div class="stat-label">Référeraient appel à nous</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Avec ou sans alcool</div>
+
+                    <div class="video-overlay-text">
+                        <span class="video-tag">Fait sur place</span>
+                        <h3>Des cocktails<br>qui racontent<br>une histoire</h3>
                     </div>
                 </div>
             </div>
