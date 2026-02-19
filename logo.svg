@@ -1,29 +1,26 @@
-<svg width="56" height="48" viewBox="0 0 56 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Visage (cercle simple) -->
-  <circle cx="20" cy="24" r="12" stroke="#FF9500" stroke-width="2.5"/>
+<svg width="64" height="48" viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tête + Barbe (forme unique simple) -->
+  <g transform="translate(16, 12)">
+    <!-- Visage cercle -->
+    <circle cx="12" cy="12" r="11" fill="none" stroke="#FFA500" stroke-width="2.5"/>
 
-  <!-- Lunettes de soleil (plus larges et visibles) -->
-  <path d="M11 22h5c1 0 2 1 2 2v2c0 1-1 2-2 2h-5c-1 0-2-1-2-2v-2c0-1 1-2 2-2z" fill="#FF9500"/>
-  <path d="M21 22h5c1 0 2 1 2 2v2c0 1-1 2-2 2h-5c-1 0-2-1-2-2v-2c0-1 1-2 2-2z" fill="#FF9500"/>
-  <line x1="18" y1="24" x2="21" y2="24" stroke="#FF9500" stroke-width="2"/>
+    <!-- Barbe (demi-cercle épais en bas) -->
+    <path d="M5 18 Q12 24 19 18" fill="#FFA500" stroke="#FFA500" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- Barbe (trapèze stylisé) -->
-  <path d="M12 30c0 0 2 6 8 6s8-6 8-6v-2H12v2z" fill="#FF9500" opacity="0.9"/>
-  <path d="M14 32c0 0 2 3 6 3s6-3 6-3" stroke="#FF9500" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Lunettes (2 rectangles arrondis simples) -->
+    <rect x="5" y="9" width="5" height="4" rx="1" fill="#FFA500"/>
+    <rect x="14" y="9" width="5" height="4" rx="1" fill="#FFA500"/>
+  </g>
 
-  <!-- Verre à cocktail (sur le côté, animé) -->
-  <g id="cocktail-glass" transform="translate(40, 24)">
-    <!-- Tige -->
-    <line x1="0" y1="-8" x2="0" y2="4" stroke="#FF9500" stroke-width="1.5"/>
-    <!-- Base -->
-    <line x1="-3" y1="4" x2="3" y2="4" stroke="#FF9500" stroke-width="2" stroke-linecap="round"/>
-    <!-- Verre triangle -->
-    <path d="M-6 -8L0 2L6 -8z" stroke="#FF9500" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  <!-- Verre cocktail (triangle simple + tige) -->
+  <g transform="translate(44, 24)">
+    <!-- Triangle verre -->
+    <path d="M0 -10 L5 0 L-5 0 Z" fill="none" stroke="#FFA500" stroke-width="2.5" stroke-linejoin="round"/>
     <!-- Liquide -->
-    <path d="M-4 -5L0 0L4 -5z" fill="#FF9500" opacity="0.3"/>
-    <!-- Paille -->
-    <line x1="2" y1="-6" x2="4" y2="-12" stroke="#FF9500" stroke-width="1.5" stroke-linecap="round"/>
-    <!-- Olive -->
-    <circle cx="0" cy="-4" r="1.5" fill="#FF9500"/>
+    <path d="M-3 -5 L3 -5 L2 -1 L-2 -1 Z" fill="#FFA500" opacity="0.4"/>
+    <!-- Tige -->
+    <line x1="0" y1="0" x2="0" y2="6" stroke="#FFA500" stroke-width="2"/>
+    <!-- Base -->
+    <line x1="-4" y1="6" x2="4" y2="6" stroke="#FFA500" stroke-width="2.5" stroke-linecap="round"/>
   </g>
 </svg>
