@@ -230,9 +230,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 56px;
+    height: 48px;
     color: var(--primary);
+}
+
+/* Animation du verre (balancement subtil) */
+.logo:hover .logo-icon {
+    animation: cocktailShake 0.5s ease-in-out;
+}
+
+@keyframes cocktailShake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
 }
 
 .nav {
