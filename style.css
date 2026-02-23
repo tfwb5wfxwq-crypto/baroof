@@ -994,11 +994,11 @@ section {
 
 /* Recadrage spécifique par photo */
 .atelier-photo-slideshow .photo-slide:nth-child(1) {
-    background-position: 82% center; /* Bateau trinquent - encore plus à droite */
+    background-position: 88% center; /* Bateau trinquent - max à droite */
 }
 
 .atelier-photo-slideshow .photo-slide:nth-child(2) {
-    background-position: 78% 40%; /* Marc shaker - tête + cocktail mieux centré */
+    background-position: 85% 40%; /* Marc shaker - verres à droite */
 }
 
 .atelier-photo-slideshow .photo-slide:nth-child(3) {
@@ -1006,7 +1006,7 @@ section {
 }
 
 .atelier-photo-slideshow .photo-slide:nth-child(4) {
-    background-position: 70% 78%; /* Table extérieur - descendre la table */
+    background-position: 70% 55%; /* Table extérieur - voir la table pas la pelouse */
 }
 
 /* Card flottante glass */
