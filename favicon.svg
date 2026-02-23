@@ -3,17 +3,21 @@
         <style>
             .bg { fill: #0f1419; }
             .letter { fill: #d6ac7a; }
+            .accent { fill: #d6ac7a; }
         </style>
     </defs>
 
     <!-- Fond sombre carré avec coins arrondis -->
     <rect class="bg" width="300" height="300" rx="40"/>
 
-    <!-- Lettre B scalée pour format carré -->
-    <g transform="translate(30, -20) scale(0.65)">
+    <!-- Lettre B centrée -->
+    <g transform="translate(50, -20) scale(0.65)">
         <path class="letter" d="M170.05,236.57c93.02-62.61,52.67-140.58,31.3-158.31C171.75,53.7-5.25,80.95.12,100.62c24.15,0,23.25,49.19,23.25,49.19v279.94s2.32,21.31-12.94,46.01-1.09,21.07-1.09,21.07c0,0,84.27-14.17,136.22-41.77,53.4-31.6,95.9-67.2,95.9-140.94s-71.41-77.55-71.41-77.55ZM99.4,106.88s53.66.89,53.66,59.92-53.66,69.76-53.66,69.76V106.88ZM99.4,424.39v-158.31s65.51,1.09,65.51,73.15-65.51,85.16-65.51,85.16Z"/>
     </g>
 
-    <!-- Apostrophe -->
-    <text x="200" y="120" class="letter" font-family="Georgia, serif" font-size="140" font-weight="bold" font-style="italic">'</text>
+    <!-- Apostrophe agrandie et plus visible -->
+    <text x="205" y="105" class="letter" font-family="Georgia, serif" font-size="180" font-weight="900" font-style="italic">'</text>
+
+    <!-- Goutte orange accent (petite) -->
+    <ellipse cx="240" cy="240" rx="12" ry="18" class="accent" transform="rotate(-15 240 240)"/>
 </svg>
