@@ -1280,12 +1280,25 @@ section {
     vertical-align: middle;
 }
 
-.temoignages-stat .google-badge {
-    display: inline-block;
-    margin-left: 8px;
-    font-size: 13px;
-    color: var(--gray-400);
-    font-weight: 400;
+.temoignages-stat .google-logo {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.temoignages-stat .google-logo:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.temoignages-stat .google-logo svg {
+    display: block;
 }
 
 /* ====================================
