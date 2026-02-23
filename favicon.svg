@@ -10,14 +10,14 @@
     <!-- Fond noir rond -->
     <circle class="bg" cx="150" cy="150" r="150"/>
 
-    <!-- Lettre B qui prend 98% du cercle -->
-    <g transform="translate(40, 20) scale(1.0)">
+    <!-- Lettre B mieux calée et moins grosse -->
+    <g transform="translate(55, 50) scale(0.75)">
         <path class="letter" d="M170.05,236.57c93.02-62.61,52.67-140.58,31.3-158.31C171.75,53.7-5.25,80.95.12,100.62c24.15,0,23.25,49.19,23.25,49.19v279.94s2.32,21.31-12.94,46.01-1.09,21.07-1.09,21.07c0,0,84.27-14.17,136.22-41.77,53.4-31.6,95.9-67.2,95.9-140.94s-71.41-77.55-71.41-77.55ZM99.4,106.88s53.66.89,53.66,59.92-53.66,69.76-53.66,69.76V106.88ZM99.4,424.39v-158.31s65.51,1.09,65.51,73.15-65.51,85.16-65.51,85.16Z"/>
     </g>
 
     <!-- Apostrophe en bas à droite (petite) -->
-    <text x="210" y="260" class="letter" font-family="Georgia, serif" font-size="50" font-weight="900" font-style="italic">'</text>
+    <text x="210" y="250" class="letter" font-family="Georgia, serif" font-size="45" font-weight="900" font-style="italic">'</text>
 
     <!-- Goutte orange en bas (petite) -->
-    <ellipse cx="240" cy="260" rx="8" ry="12" class="drop" transform="rotate(-15 240 260)"/>
+    <ellipse cx="235" cy="250" rx="7" ry="11" class="drop" transform="rotate(-15 235 250)"/>
 </svg>
