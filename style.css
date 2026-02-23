@@ -2404,7 +2404,7 @@ p {
 h1, .hero-title {
     font-family: 'Bebas Neue', 'Space Grotesk', sans-serif;
     font-weight: 400;
-    font-size: clamp(3rem, 8vw, 5.5rem) !important;
+    font-size: clamp(2.5rem, 6.5vw, 4.5rem) !important;
     line-height: 0.95 !important;
     letter-spacing: 0.02em !important;
     text-transform: uppercase;
