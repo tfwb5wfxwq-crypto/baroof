@@ -998,7 +998,7 @@ section {
 }
 
 .atelier-photo-slideshow .photo-slide:nth-child(2) {
-    background-position: 78% center; /* Close-up cocktails - encore plus à droite */
+    background-position: 78% 40%; /* Marc shaker - tête + cocktail mieux centré */
 }
 
 .atelier-photo-slideshow .photo-slide:nth-child(3) {
