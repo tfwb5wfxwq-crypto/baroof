@@ -188,25 +188,38 @@ contactForm.addEventListener('submit', async (e) => {
         document.head.appendChild(spinStyle);
     }
 
-    // Simulate form submission (replace with actual API call)
+    // Envoi du formulaire via PHP
     try {
-        await new Promise(resolve => setTimeout(resolve, 2000));
-
-        // Success - mark all fields as success briefly
-        formInputs.forEach(input => {
-            if (input.value.trim()) {
-                input.classList.add('success');
-            }
+        const response = await fetch('contact.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
         });
 
-        showNotification('Message envoyé ! On vous répond très vite 🎉', 'success');
+        const result = await response.json();
 
-        setTimeout(() => {
-            contactForm.reset();
-            formInputs.forEach(input => input.classList.remove('success'));
-        }, 1500);
+        if (result.success) {
+            // Success - mark all fields as success briefly
+            formInputs.forEach(input => {
+                if (input.value.trim()) {
+                    input.classList.add('success');
+                }
+            });
+
+            showNotification('Message envoyé ! On vous répond très vite 🎉', 'success');
+
+            setTimeout(() => {
+                contactForm.reset();
+                formInputs.forEach(input => input.classList.remove('success'));
+            }, 1500);
+        } else {
+            showNotification(result.message || 'Une erreur est survenue. Réessayez ou contactez-nous par email.', 'error');
+        }
 
     } catch (error) {
+        console.error('Erreur:', error);
         showNotification('Une erreur est survenue. Réessayez ou contactez-nous par email.', 'error');
     } finally {
         submitBtn.disabled = false;
