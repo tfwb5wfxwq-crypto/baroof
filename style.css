@@ -1158,8 +1158,13 @@ section {
 }
 
 .temoignage-stars {
-    font-size: 14px;
+    display: flex;
+    gap: 3px;
     margin-bottom: 12px;
+}
+
+.temoignage-stars svg {
+    flex-shrink: 0;
 }
 
 .temoignage-quote {
@@ -1269,6 +1274,14 @@ section {
 .temoignages-stat .stars svg {
     display: inline-block;
     vertical-align: middle;
+}
+
+.temoignages-stat .google-badge {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 13px;
+    color: var(--gray-400);
+    font-weight: 400;
 }
 
 /* ====================================
