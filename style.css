@@ -994,11 +994,11 @@ section {
 
 /* Recadrage spécifique par photo */
 .atelier-photo-slideshow .photo-slide:nth-child(1) {
-    background-position: 65% center; /* Bateau trinquent - plus à droite */
+    background-position: 75% center; /* Bateau trinquent - plus à droite */
 }
 
 .atelier-photo-slideshow .photo-slide:nth-child(2) {
-    background-position: 60% center; /* Close-up cocktails - plus à droite */
+    background-position: 70% center; /* Close-up cocktails - verres à droite */
 }
 
 .atelier-photo-slideshow .photo-slide:nth-child(3) {
@@ -1006,7 +1006,7 @@ section {
 }
 
 .atelier-photo-slideshow .photo-slide:nth-child(4) {
-    background-position: center 60%; /* Bar extérieur - un peu plus bas */
+    background-position: 70% 70%; /* Table extérieur - plus à droite et plus bas */
 }
 
 /* Card flottante glass */
