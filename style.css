@@ -1239,7 +1239,7 @@ section {
 }
 
 .temoignages-gallery .gallery-item:nth-child(2) {
-    background-position: center 25%; /* Cocktail - centré et monté plus haut */
+    background-position: center 60%; /* Cocktail - visible en entier */
 }
 
 /* 2 dernières photos prennent plus de place */
