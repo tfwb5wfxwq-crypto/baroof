@@ -1226,11 +1226,11 @@ section {
 
 /* Cadrage photos témoignages */
 .temoignages-gallery .gallery-item:nth-child(1) {
-    background-position: center 60%; /* Marc barman - voir visage + cocktail */
+    background-position: center 45%; /* Marc shake - voir son visage */
 }
 
-.temoignages-gallery .gallery-item:nth-child(3) {
-    background-position: center 45%; /* Cocktail - centré et monté */
+.temoignages-gallery .gallery-item:nth-child(2) {
+    background-position: center 35%; /* Cocktail - centré et monté */
 }
 
 /* 2 dernières photos prennent plus de place */
@@ -1589,9 +1589,9 @@ section {
 }
 
 .footer-top {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 40px;
     padding-bottom: 24px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -1599,6 +1599,13 @@ section {
 
 .footer-left {
     text-align: left;
+}
+
+.footer-left h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0 0 8px 0;
 }
 
 .footer-tagline {
