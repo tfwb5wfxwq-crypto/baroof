@@ -93,7 +93,7 @@ const animateElements = document.querySelectorAll(`
 animateElements.forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    el.style.transition = 'opacity 0.4s ease-out, transform 0.4s ease-out';
     observer.observe(el);
 });
 
