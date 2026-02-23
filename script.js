@@ -271,13 +271,18 @@ function animateCounter(element, target, duration = 2000) {
     const increment = target / (duration / 16);
     let current = start;
 
+    // Préserver le span .stat-unit s'il existe
+    const unitSpan = element.querySelector('.stat-unit');
+    const unit = unitSpan ? unitSpan.outerHTML : '';
+    const suffix = element.textContent.includes('+') ? '+' : '';
+
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
-            element.textContent = target;
+            element.innerHTML = target + suffix + unit;
             clearInterval(timer);
         } else {
-            element.textContent = Math.floor(current);
+            element.innerHTML = Math.floor(current) + suffix + unit;
         }
     }, 16);
 }
@@ -366,5 +371,41 @@ function preventWidows() {
 }
 
 preventWidows();
+
+// ====================================
+// FACON SLIDESHOW
+// ====================================
+const faconSlides = document.querySelectorAll('.facon-slideshow .slide');
+let currentFaconSlide = 0;
+
+function nextFaconSlide() {
+    if (faconSlides.length === 0) return;
+    faconSlides[currentFaconSlide].classList.remove('active');
+    currentFaconSlide = (currentFaconSlide + 1) % faconSlides.length;
+    faconSlides[currentFaconSlide].classList.add('active');
+}
+
+// Change slide every 4 seconds
+if (faconSlides.length > 0) {
+    setInterval(nextFaconSlide, 4000);
+}
+
+// ====================================
+// ATELIER SLIDESHOW
+// ====================================
+const atelierPhotoSlides = document.querySelectorAll('.atelier-photo-slideshow .photo-slide');
+let currentAtelierPhoto = 0;
+
+function nextAtelierPhoto() {
+    if (atelierPhotoSlides.length === 0) return;
+    atelierPhotoSlides[currentAtelierPhoto].classList.remove('active');
+    currentAtelierPhoto = (currentAtelierPhoto + 1) % atelierPhotoSlides.length;
+    atelierPhotoSlides[currentAtelierPhoto].classList.add('active');
+}
+
+// Change slide every 4 seconds
+if (atelierPhotoSlides.length > 0) {
+    setInterval(nextAtelierPhoto, 4000);
+}
 
 console.log('🍹 Bar\'OOF - Site chargé avec succès !');
