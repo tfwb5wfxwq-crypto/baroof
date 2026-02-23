@@ -1229,6 +1229,10 @@ section {
     background-position: center 60%; /* Marc barman - voir visage + cocktail */
 }
 
+.temoignages-gallery .gallery-item:nth-child(3) {
+    background-position: center 45%; /* Cocktail - centré et monté */
+}
+
 /* 2 dernières photos prennent plus de place */
 .gallery-item:nth-child(4),
 .gallery-item:nth-child(5) {
@@ -1252,6 +1256,19 @@ section {
 .temoignages-stat strong {
     color: var(--primary);
     font-size: 22px;
+}
+
+.temoignages-stat .stars {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.temoignages-stat .stars svg {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* ====================================
