@@ -1,0 +1,10 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cercle de fond -->
+  <circle cx="40" cy="40" r="40" fill="#1a1a1a"/>
+
+  <!-- Lettre B en or -->
+  <text x="28" y="54" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="#d6ac7a">B</text>
+
+  <!-- Goutte orange -->
+  <path d="M 54 32 Q 54 24 58 20 Q 62 24 62 32 Q 62 38 58 42 Q 54 38 54 32 Z" fill="#FFA500"/>
+</svg>

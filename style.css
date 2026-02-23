@@ -1402,6 +1402,58 @@ section {
 }
 
 /* ====================================
+   CLIENTS
+   ==================================== */
+.clients {
+    background: var(--navy-light);
+    padding: 80px 0;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 48px;
+    margin-top: 48px;
+    align-items: center;
+}
+
+.client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.client-logo img {
+    max-width: 120px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.client-logo img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .client-logo img {
+        max-width: 100px;
+        max-height: 60px;
+    }
+}
+
+/* ====================================
    CONTACT
    ==================================== */
 .contact {
