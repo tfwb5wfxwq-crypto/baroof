@@ -102,43 +102,115 @@ animateElements.forEach(el => {
 // ====================================
 const contactForm = document.getElementById('contactForm');
 
+// Real-time validation - remove error on input
+const formInputs = contactForm.querySelectorAll('input[required], select[required], textarea[required]');
+formInputs.forEach(input => {
+    input.addEventListener('input', () => {
+        if (input.value.trim()) {
+            input.classList.remove('error');
+            input.classList.add('success');
+            setTimeout(() => input.classList.remove('success'), 1000);
+        }
+    });
+
+    input.addEventListener('change', () => {
+        if (input.value.trim()) {
+            input.classList.remove('error');
+        }
+    });
+});
+
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    // Remove all previous error states
+    formInputs.forEach(input => input.classList.remove('error', 'success'));
+
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
+    let hasError = false;
 
-    // Basic validation
-    if (!data.name || !data.email || !data.eventType || !data.guests || !data.date) {
-        showNotification('Veuillez remplir tous les champs obligatoires.', 'error');
+    // Check required fields and highlight in orange
+    const requiredFields = [
+        { name: 'name', element: contactForm.querySelector('#name') },
+        { name: 'email', element: contactForm.querySelector('#email') },
+        { name: 'eventType', element: contactForm.querySelector('#eventType') },
+        { name: 'guests', element: contactForm.querySelector('#guests') },
+        { name: 'date', element: contactForm.querySelector('#date') }
+    ];
+
+    requiredFields.forEach(field => {
+        if (!data[field.name] || data[field.name].trim() === '') {
+            field.element.classList.add('error');
+            hasError = true;
+        }
+    });
+
+    if (hasError) {
+        showNotification('Merci de remplir tous les champs obligatoires', 'error');
+        // Scroll to first error
+        const firstError = contactForm.querySelector('.error');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            firstError.focus();
+        }
         return;
     }
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailInput = contactForm.querySelector('#email');
     if (!emailRegex.test(data.email)) {
-        showNotification('Veuillez entrer une adresse email valide.', 'error');
+        emailInput.classList.add('error');
+        showNotification('L\'adresse email n\'est pas valide', 'error');
+        emailInput.focus();
         return;
     }
 
-    // Disable submit button
+    // Disable submit button with animation
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Envoi en cours...';
+    submitBtn.style.opacity = '0.6';
+    submitBtn.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;">
+            <circle cx="12" cy="12" r="10" opacity="0.25"></circle>
+            <path d="M12 2 A 10 10 0 0 1 22 12" opacity="1"></path>
+        </svg>
+        Envoi en cours...
+    `;
+
+    // Add spin animation
+    const spinStyle = document.createElement('style');
+    spinStyle.textContent = `@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`;
+    if (!document.querySelector('style[data-spin]')) {
+        spinStyle.setAttribute('data-spin', '');
+        document.head.appendChild(spinStyle);
+    }
 
     // Simulate form submission (replace with actual API call)
     try {
         await new Promise(resolve => setTimeout(resolve, 2000));
 
-        // Success
-        showNotification('Message envoyé ! On vous répond très vite.', 'success');
-        contactForm.reset();
+        // Success - mark all fields as success briefly
+        formInputs.forEach(input => {
+            if (input.value.trim()) {
+                input.classList.add('success');
+            }
+        });
+
+        showNotification('Message envoyé ! On vous répond très vite 🎉', 'success');
+
+        setTimeout(() => {
+            contactForm.reset();
+            formInputs.forEach(input => input.classList.remove('success'));
+        }, 1500);
 
     } catch (error) {
         showNotification('Une erreur est survenue. Réessayez ou contactez-nous par email.', 'error');
     } finally {
         submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
         submitBtn.innerHTML = originalText;
     }
 });
