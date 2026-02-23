@@ -313,7 +313,7 @@
                             <div><strong>7,50€</strong> mocktail</div>
                         </div>
 
-                        <a href="#contact" class="btn btn-outline btn-sm">Réserver</a>
+                        <a href="#contact" class="btn btn-outline btn-sm formule-btn" data-formule="Découverte">Réserver</a>
                     </div>
                 </div>
 
@@ -333,7 +333,7 @@
                             <div><strong>8€</strong> mocktail</div>
                         </div>
 
-                        <a href="#contact" class="btn btn-primary btn-sm">Réserver</a>
+                        <a href="#contact" class="btn btn-primary btn-sm formule-btn" data-formule="Signature">Réserver</a>
                     </div>
                 </div>
 
@@ -352,7 +352,7 @@
                             <div><strong>9€</strong> mocktail</div>
                         </div>
 
-                        <a href="#contact" class="btn btn-outline btn-sm">Réserver</a>
+                        <a href="#contact" class="btn btn-outline btn-sm formule-btn" data-formule="Sur-Mesure">Réserver</a>
                     </div>
                 </div>
             </div>
@@ -652,7 +652,7 @@
                             </div>
                             <div class="method-content">
                                 <div class="method-label">Par téléphone</div>
-                                <a href="tel:+33XXXXXXXXX" class="method-value">+33 6 XX XX XX XX</a>
+                                <a href="tel:+33622287195" class="method-value">+33 (0)6 22 28 71 95</a>
                             </div>
                         </div>
                     </div>
@@ -695,6 +695,16 @@
 
                         <div class="form-row">
                             <div class="form-group">
+                                <label for="formule">Formule souhaitée</label>
+                                <select id="formule" name="formule">
+                                    <option value="">Choisir une formule</option>
+                                    <option value="Découverte">Découverte (10€/7.50€)</option>
+                                    <option value="Signature">Signature (12€/8€)</option>
+                                    <option value="Sur-Mesure">Sur-Mesure (14€/9€)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="eventType">C'est pour quoi ? *</label>
                                 <select id="eventType" name="eventType" required>
                                     <option value="">Type d'événement</option>
@@ -706,7 +716,9 @@
                                     <option value="autre">Autre</option>
                                 </select>
                             </div>
+                        </div>
 
+                        <div class="form-row">
                             <div class="form-group">
                                 <label for="guests">Combien de monde ? *</label>
                                 <select id="guests" name="guests" required>
@@ -717,11 +729,11 @@
                                     <option value="200+">200+ personnes</option>
                                 </select>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="date">Vous avez une date en tête ? *</label>
-                            <input type="date" id="date" name="date" required>
+                            <div class="form-group">
+                                <label for="date">Vous avez une date en tête ? *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -754,7 +766,7 @@
                     <div class="footer-left">
                         <h3>Bar'OOF</h3>
                         <p class="footer-tagline">Bar à cocktails mobile</p>
-                        <p class="footer-location">Île-de-France</p>
+                        <p class="footer-location">59 rue de Ponthieu, 75008 Paris</p>
                     </div>
 
                     <div class="footer-right">

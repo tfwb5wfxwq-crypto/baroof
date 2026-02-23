@@ -480,4 +480,28 @@ if (atelierPhotoSlides.length > 0) {
     setInterval(nextAtelierPhoto, 4000);
 }
 
+// ====================================
+// FORMULE PRE-FILL
+// ====================================
+document.querySelectorAll('.formule-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        const formule = this.getAttribute('data-formule');
+        if (formule) {
+            // Wait for smooth scroll to finish, then pre-fill
+            setTimeout(() => {
+                const formuleSelect = document.getElementById('formule');
+                if (formuleSelect) {
+                    formuleSelect.value = formule;
+                    // Add a subtle highlight effect
+                    formuleSelect.style.transition = 'background-color 0.3s';
+                    formuleSelect.style.backgroundColor = 'rgba(214, 172, 122, 0.1)';
+                    setTimeout(() => {
+                        formuleSelect.style.backgroundColor = '';
+                    }, 1000);
+                }
+            }, 500);
+        }
+    });
+});
+
 console.log('🍹 Bar\'OOF - Site chargé avec succès !');
