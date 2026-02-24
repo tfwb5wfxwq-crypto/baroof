@@ -68,7 +68,7 @@
     .contact-form-wrapper,
     .formule-form-wrapper {
         padding: 20px 16px !important; /* Au lieu de 32px/24px */
-        margin: 0 -8px !important; /* Utilise toute la largeur */
+        margin: 0 !important; /* Pas de débordement horizontal */
     }
 
     .form-row {
@@ -304,9 +304,9 @@
         transition-duration: 0.2s !important;
     }
 
-    /* ========== 21. HERO BADGE - Éviter chevauchement avec header ========== */
+    /* ========== 21. HERO BADGE - Espace réduit avec header ========== */
     .hero {
-        padding-top: 120px !important; /* Plus d'espace pour le badge */
+        padding-top: 60px !important; /* Espace minimal */
     }
 
     .hero-badge {
@@ -466,7 +466,7 @@
         outline: none !important;
     }
 
-    /* ========== 27. MENU TOGGLE - HAUTE VISIBILITÉ ========== */
+    /* ========== 27. MENU TOGGLE - DISCRET MAIS VISIBLE ========== */
     .menu-toggle {
         display: flex !important;
         z-index: 99999 !important;
@@ -476,19 +476,19 @@
         justify-content: center !important;
         align-items: center !important;
         padding: 10px !important;
-        background: rgba(240, 240, 240, 0.7) !important; /* Gris clair discret */
+        background: rgba(230, 230, 230, 0.5) !important; /* Discret mais présent */
         border-radius: 8px !important;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) !important; /* Ombre subtile */
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important; /* Ombre très légère */
     }
 
     .menu-toggle span {
-        background: #555 !important; /* Gris foncé au lieu de noir */
+        background: rgba(80, 80, 80, 0.75) !important; /* Gris visible */
         transition: all 0.3s ease !important;
     }
 
-    /* Quand menu ouvert, hamburger un peu plus visible mais pas trop */
+    /* Quand menu ouvert, hamburger visible */
     .menu-toggle.active {
-        background: rgba(255, 255, 255, 0.85) !important; /* Blanc semi-transparent */
+        background: rgba(255, 255, 255, 0.6) !important;
         z-index: 100000 !important;
     }
 
@@ -516,21 +516,24 @@
     /* Nav mobile - Sort visuellement du header mais reste dans le DOM */
     .nav-mobile {
         display: flex !important;
-        position: fixed !important; /* Sort du flow */
+        flex-direction: column !important;
+        position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         right: 0 !important;
         bottom: 0 !important;
-        z-index: 99998 !important; /* Sous le header/hamburger */
+        width: 100vw !important;
+        height: 100vh !important;
+        z-index: 99998 !important;
         overflow-y: auto !important;
+        overflow-x: hidden !important;
         transform: translateX(100%) !important;
         opacity: 0 !important;
         visibility: hidden !important;
         transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s !important;
-        background: rgba(0, 0, 0, 0.92) !important;
+        background: rgba(0, 0, 0, 0.7) !important; /* Transparent assombri au lieu de noir opaque */
         backdrop-filter: blur(10px) !important;
-        padding-top: 120px !important;
-        flex-direction: column !important;
+        padding: 120px 24px 40px 24px !important;
         align-items: center !important;
         justify-content: flex-start !important;
         gap: 24px !important;
@@ -538,9 +541,15 @@
 
     /* Liens du menu en blanc pour contraste */
     .nav-mobile .nav-link {
+        display: block !important;
+        width: 100% !important;
+        max-width: 300px !important;
+        text-align: center !important;
         color: white !important;
         font-size: 1.25rem !important;
         padding: 12px 24px !important;
+        white-space: normal !important;
+        overflow: visible !important;
     }
 
     .nav-mobile.active {
