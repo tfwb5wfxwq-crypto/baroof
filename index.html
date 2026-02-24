@@ -21,19 +21,93 @@
     <meta property="og:description" content="Bar mobile professionnel pour événements en Île-de-France. Cocktails & mocktails faits minute, barmen pros. 500+ événements réalisés.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://baroof.fr">
+    <meta property="og:image" content="https://baroof.fr/og-image.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bar'OOF - Bar Mobile & Cocktails Événementiels">
+    <meta name="twitter:description" content="Bar mobile professionnel pour événements en Île-de-France. Cocktails & mocktails faits minute, barmen pros. 500+ événements réalisés.">
+    <meta name="twitter:image" content="https://baroof.fr/og-image.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://baroof.fr">
+
+    <!-- Structured Data - LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://baroof.fr",
+      "name": "Bar'OOF",
+      "description": "Bar à cocktails mobile pour événements professionnels et privés en Île-de-France. Mariages, team building, anniversaires.",
+      "url": "https://baroof.fr",
+      "telephone": "+33-6-XX-XX-XX-XX",
+      "email": "m.battais@baroof.fr",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Île-de-France",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "48.8566",
+        "longitude": "2.3522"
+      },
+      "priceRange": "€€",
+      "servesCuisine": "Cocktails",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "48.8566",
+          "longitude": "2.3522"
+        },
+        "geoRadius": "100000"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "23:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "500"
+      },
+      "sameAs": [
+        "https://www.instagram.com/baroof_",
+        "https://www.facebook.com/baroof"
+      ]
+    }
+    </script>
 
     <title>Bar'OOF - Bar Mobile & Cocktails pour Événements | Île-de-France</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="favicon-512.png">
+    <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-fixes.css">
 </head>
 <body>
     <!-- Header Navigation -->
@@ -111,7 +185,8 @@
                     </div>
                 </a>
 
-                <nav class="nav" id="nav">
+                <!-- Nav desktop (masqué sur mobile) -->
+                <nav class="nav nav-desktop">
                     <a href="#comment-ca-marche" class="nav-link">Notre approche</a>
                     <a href="#prestations" class="nav-link">Nos formules</a>
                     <a href="#ateliers" class="nav-link">Ateliers</a>
@@ -130,6 +205,14 @@
         </div>
     </header>
 
+    <!-- Nav mobile (en dehors du header, masqué sur desktop) -->
+    <nav class="nav-mobile" id="nav">
+        <a href="#comment-ca-marche" class="nav-link">Notre approche</a>
+        <a href="#prestations" class="nav-link">Nos formules</a>
+        <a href="#ateliers" class="nav-link">Ateliers</a>
+        <a href="#temoignages" class="nav-link">Témoignages</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -618,7 +701,7 @@
                             </div>
                             <div class="method-content">
                                 <div class="method-label">Par mail</div>
-                                <a href="mailto:contact@baroof.fr" class="method-value">contact@baroof.fr</a>
+                                <a href="mailto:m.battais@baroof.fr" class="method-value">m.battais@baroof.fr</a>
                             </div>
                         </div>
 
@@ -640,7 +723,7 @@
                             <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
                         </svg>
                         <div>
-                            <strong>On répond vraiment.</strong> Pas de réponse automatique, pas de "votre demande a bien été prise en compte". Un humain lit votre message et vous répond.
+                            <strong>Réponse sous 24h.</strong> Vous recevrez une confirmation automatique, puis Marc reviendra vers vous personnellement pour échanger sur votre événement.
                         </div>
                     </div>
                 </div>
@@ -748,7 +831,7 @@
                     </div>
 
                     <div class="footer-right">
-                        <a href="mailto:contact@baroof.fr" class="footer-contact-link">contact@baroof.fr</a>
+                        <a href="mailto:m.battais@baroof.fr" class="footer-contact-link">m.battais@baroof.fr</a>
                         <div class="footer-social">
                             <a href="#" aria-label="Instagram">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -772,6 +855,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Bouton contact fixe mobile -->
+    <a href="#contact" class="fixed-contact-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        Contact
+    </a>
 
     <script src="script.js"></script>
 </body>
